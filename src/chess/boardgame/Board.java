@@ -29,14 +29,14 @@ public class Board {
     }
 
     public Piece piece(Position position) {
-        return this.piece(position.getRow(), position.getColumn());
+        return this.piece(position.row(), position.column());
     }
 
     public void placePiece(Piece piece, Position position) {
         if (thereIsAPiece(position)) {
             throw new BoardException("Piece already exists in this position " + position);
         }
-        pieces[position.getRow()][position.getColumn()] = piece;
+        pieces[position.row()][position.column()] = piece;
         piece.position = position;
     }
 
@@ -45,7 +45,7 @@ public class Board {
     }
 
     public boolean positionExists(Position position) {
-        return positionExists(position.getRow(), position.getColumn());
+        return positionExists(position.row(), position.column());
     }
 
     public boolean thereIsAPiece(Position position) {
@@ -60,7 +60,7 @@ public class Board {
     }
 
     public void validadePositions(Position position) {
-        this.validadePositions(position.getRow(), position.getColumn());
+        this.validadePositions(position.row(), position.column());
     }
 
 }
